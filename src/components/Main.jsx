@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Introduction from "./Introduction";
 import InfrastructureBasics from "./InfrastructureBasics";
+import RollUps from "./What Are Rollups";
 
 const Main = () => {
 	return (
@@ -12,6 +13,7 @@ const Main = () => {
 			</header>
 			<Introduction />
 			<InfrastructureBasics />
+			<RollUps />
 		</>
 	);
 };
