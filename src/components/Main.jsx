@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Introduction from "./Introduction";
 import InfrastructureBasics from "./InfrastructureBasics";
 import RollUps from "./What Are Rollups";
+import "./Main.scss";
 
 const Main = () => {
 	return (

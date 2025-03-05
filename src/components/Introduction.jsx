@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
+import "./Introduction.scss";
 
 export default function Introduction() {
 	return (
 		<>
 			<section class="hero-section">
 				<div class="hero-content">
-					<h1>Welcome to Erigon</h1>
 					<p>Your solution for blockchain scalability and performance.</p>
 				</div>
 				<div class="hero-image">
