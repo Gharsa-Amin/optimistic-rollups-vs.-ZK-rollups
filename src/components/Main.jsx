@@ -3,6 +3,7 @@ import Introduction from "./Introduction/Introduction";
 import InfrastructureBasics from "./InfrastructureBasics";
 import RollUps from "./What Are Rollups";
 import "./Main.scss";
+import ComparisonTable from "./Charts/chart";
 
 const Main = () => {
 	return (

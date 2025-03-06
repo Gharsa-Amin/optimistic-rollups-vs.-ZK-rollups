@@ -467,6 +467,7 @@ import { Link } from "react-router-dom";
 import zkrollups from "../assets/zk rollups .webp";
 import optimisticrollups from "../assets/Optimistic rollups .webp";
 import "./RollUps.scss";
+import ComparisonTable from "./Charts/chart";
 
 export default function RollUps() {
 	return (
@@ -569,7 +570,7 @@ export default function RollUps() {
 							approaches to validation and security. Zero-Knowledge Rollups
 							(ZK-Rollups) and Optimistic Rollups.
 						</p>
-
+						<ComparisonTable />
 						<h2 className="section-subtitle">
 							Zero-Knowledge Rollups (ZK-Rollups)
 						</h2>
@@ -593,55 +594,43 @@ export default function RollUps() {
 							className="image"
 						/>
 
-						<h4>How ZK-Rollups Work:</h4>
-						<ul className="list">
-							<li>
-								1. **Transaction Submission**: Users sign and submit
-								transactions to the ZK-Rollup network
-							</li>
-							<li>
-								2. **Batch Processing**: Multiple transactions are bundled
-								together and processed off-chain
-							</li>
-							<li>
-								3. **Proof Generation**: A cryptographic validity proof
-								(typically zk-SNARK or zk-STARK) is created
-							</li>
-							<li>
-								4. **Main Chain Submission**: The proof and minimal transaction
-								data are submitted to the main chain
-							</li>
-							<li>
-								5. **Verification**: A smart contract on the main chain verifies
-								the proof's validity
-							</li>
-							<li>
-								6. **State Update**: Upon successful verification, the main
-								chain's state is updated to reflect the processed transactions
-							</li>
-						</ul>
-
-						<h3 className="section-subtitle">
-							Technical Components of ZK-Rollups
-						</h3>
-						<ul className="list">
-							<li>
-								<strong>ZK-Prover</strong>: System that generates validity
-								proofs
-							</li>
-							<li>
-								<strong>Verifier Contract</strong>: Smart contract on Layer 1
-								that verifies proofs
-							</li>
-							<li>
-								<strong>State Database</strong>: Stores the current state of all
-								accounts and contracts
-							</li>
-							<li>
-								<strong>Bridges</strong>: Contracts that manage asset transfers
-								between Layer 1 and Layer 2
-							</li>
-						</ul>
+						<section className="section">
+							<div className="container">
+								<h2 className="section-title">How ZK-Rollups Work</h2>
+								<p className="section-description">
+									ZK-Rollups bundle multiple transactions into a single batch
+									and submit cryptographic proofs to the main chain for
+									validation. Here’s how it works:
+								</p>
+								<ul className="list">
+									<li className="section__list">
+										<strong>1. 🔏 Transaction Submission</strong>: Users sign
+										and submit transactions to the ZK-Rollup network.
+									</li>
+									<li className="section__list">
+										<strong>2. 🔗 Batch Processing</strong>: Multiple
+										transactions are bundled together and processed off-chain.
+									</li>
+									<li className="section__list">
+										<strong>3. 🛠️ Proof Generation</strong>: A cryptographic
+										validity proof (typically zk-SNARK or zk-STARK) is created.
+									</li>
+									<li className="section__list">
+										<strong>4. 🌐 Main Chain Submission</strong>: The proof and
+										minimal transaction data are submitted to the main chain.
+									</li>
+									<li className="section__list">
+										<strong>5. ✔️ Verification</strong>: A smart contract on the
+										main chain verifies the proof’s validity.
+									</li>
+									<li className="section__list">
+										<strong>6. 🔄 State Update</strong>: Upon successful
+										verification, the main chain’s state is updated to reflect
+										the processed transactions.
+									</li>
+								</ul>
+							</div>
+						</section>
 					</div>
 				</section>
 
@@ -652,124 +641,119 @@ export default function RollUps() {
 						</h2>
 						<p className="section-description">
 							Let's illustrate how a simple token transfer works on a ZK-Rollup
-							like zkSync:
+							network like zkSync:
 						</p>
 						<ul className="list">
-							<li>
-								1. Alice wants to send 10 tokens to Bob on a ZK-Rollup network
+							<li className="section__list">
+								<strong>1. 💸 Alice Sends Tokens</strong>: Alice wants to send
+								10 tokens to Bob on a ZK-Rollup network.
 							</li>
-							<li>2. Alice signs a transaction with her private key</li>
-							<li>
-								3. Alice submits the signed transaction to the ZK-Rollup network
+							<li className="section__list">
+								<strong>2. ✍️ Transaction Signing</strong>: Alice signs a
+								transaction with her private key.
 							</li>
-							<li>
-								4. The sequencer collects the transaction with others into a
-								batch
+							<li className="section__list">
+								<strong>3. 📤 Transaction Submission</strong>: Alice submits the
+								signed transaction to the ZK-Rollup network.
 							</li>
-							<li>
-								5. The operator processes all transactions in the batch,
-								updating the state tree
+							<li className="section__list">
+								<strong>4. 🧳 Batch Collection</strong>: The sequencer collects
+								Alice’s transaction with others into a batch.
 							</li>
-							<li>6. A ZK-Prover generates a validity proof</li>
-							<li>7. The proof and state roots are submitted to Ethereum</li>
-							<li>8. The ZK-Rollup smart contract verifies the proof</li>
-							<li>
-								9. Upon successful verification, the contract updates the
-								official state root
+							<li className="section__list">
+								<strong>5. 🔄 Transaction Processing</strong>: The operator
+								processes all transactions in the batch, updating the state
+								tree.
 							</li>
-							<li>10. Alice's payment to Bob is finalized</li>
+							<li className="section__list">
+								<strong>6. 🔒 Proof Generation</strong>: A ZK-Prover generates a
+								cryptographic validity proof.
+							</li>
+							<li className="section__list">
+								<strong>7. 🏛️ Proof Submission</strong>: The proof and state
+								roots are submitted to Ethereum.
+							</li>
+							<li className="section__list">
+								<strong>8. ✅ Proof Verification</strong>: The ZK-Rollup smart
+								contract verifies the proof on Ethereum.
+							</li>
+							<li className="section__list">
+								<strong>9. 🔑 State Root Update</strong>: Upon successful
+								verification, the contract updates the official state root.
+							</li>
+							<li className="section__list">
+								<strong>10. ✔️ Finalization</strong>: Alice's payment to Bob is
+								finalized and the transaction is complete.
+							</li>
 						</ul>
 					</div>
 				</section>
 
-				<section className="section">
+				<section className="section__modifier">
 					<div className="container">
-						<h2 className="section-title">Notable ZK-Rollup Projects</h2>
-						<ul className="list">
-							<li>zkSync (zkSync Lite and zkSync Era)</li>
-							<li>Immutable X</li>
-							<li>Loopring</li>
-							<li>StarkNet</li>
-							<li>Polygon Hermez/zkEVM</li>
-						</ul>
+						<h2 className="section-title__modifier">
+							Notable ZK-Rollup Projects
+						</h2>
+						<p className="section-description__modifier">
+							Some of the most notable ZK-Rollup projects in the blockchain
+							space include zkSync (zkSync Lite and zkSync Era), Immutable X,
+							Loopring, StarkNet, and Polygon Hermez/zkEVM.
+						</p>
 					</div>
 				</section>
-
 				<section className="section">
 					<div className="container">
 						<h2 className="section-title">Case Studies</h2>
 
-						<h3 className="section-subtitle">
-							Case Study 1: Polygon Hermez (ZK-Rollup)
-						</h3>
-						<p className="section-description">
-							Polygon Hermez is an excellent example of a ZK rollup that has
-							evolved significantly over time. What makes Hermez particularly
-							interesting is its commitment to decentralization through its
-							proof of donation mechanism and permissionless node operation.
-						</p>
+						<div className="case-study">
+							<h3 className="section-subtitle">Case Study 1: Polygon Hermez</h3>
+							<p className="section-description">
+								Polygon Hermez is a decentralized ZK-Rollup solution built on
+								Ethereum, aimed at enhancing scalability and transaction
+								throughput. Its architecture integrates a sequencer, an
+								aggregator for zero-knowledge proofs, and a consensus algorithm
+								for decentralization.Initially developed as a ZK-Rollup for
+								token transfers, Hermez was later acquired by Polygon and
+								evolved into Polygon zkEVM. This expansion brings the goal of
+								achieving full EVM compatibility and a high throughput of
+								transactions.Polygon Hermez aims to handle over 2,000
+								transactions per second while ensuring security and
+								decentralization in Ethereum’s ecosystem.
+							</p>
 
-						<h4>Background</h4>
-						<p>
-							Hermez began as a standalone ZK rollup focused on token transfers
-							and was later acquired by Polygon to become part of their scaling
-							suite. It has since evolved into Polygon zkEVM, one of the leading
-							ZK rollup implementations striving for full EVM compatibility.
-						</p>
+							<h4>Key Features</h4>
+							<p className="section__list">
+								- **Sequencer**: Orders and batches transactions. -
+								**Aggregator**: Generates zk-proofs for transaction batches. -
+								**Proof of Efficiency (PoE)**: A consensus model that
+								decentralizes the network and enhances security.
+							</p>
+						</div>
 
-						<h4>Technical Architecture</h4>
-						<ul className="list">
-							<li>
-								<strong>Sequencer</strong>: Orders transactions and creates
-								batches
-							</li>
-							<li>
-								<strong>Prover System</strong>: Generates ZK proofs using a
-								modified version of the Groth16 protocol
-							</li>
-							<li>
-								<strong>Synchronizer</strong>: Keeps nodes up to date with the
-								latest state
-							</li>
-							<li>
-								<strong>Smart Contracts</strong>: Manage the verification and
-								state updates on Ethereum
-							</li>
-						</ul>
+						<div className="case-study">
+							<h3 className="section-subtitle">Case Study 2: Erigon CDK</h3>
+							<p className="section-description">
+								Erigon CDK is a modular framework designed for building
+								blockchain clients and scaling Layer 2 solutions. It offers a
+								range of tools for custom rollups and enhanced blockchain
+								performance.Originally created as an Ethereum execution client
+								focusing on performance optimization, the Erigon CDK extends its
+								capabilities by providing modular components for rollups,
+								including networking stacks and high-performance
+								databases.Erigon CDK empowers developers to create custom Layer
+								2 solutions and efficient blockchain infrastructures, helping
+								scale decentralized applications (dApps) and networks.
+							</p>
 
-						<h3 className="section-subtitle">
-							Case Study 2: Erigon CDK (Development Kit)
-						</h3>
-						<p className="section-description">
-							While not a rollup itself, Erigon CDK represents cutting-edge
-							technology for building blockchain clients and scaling solutions.
-						</p>
-
-						<h4>Background</h4>
-						<p>
-							Erigon began as an Ethereum execution client focused on efficiency
-							and performance. The CDK (Consensus and Execution Layer
-							Development Kit) extends this by providing modular components for
-							building rollups and custom Layer 2 solutions.
-						</p>
-
-						<h4>Erigon CDK provides:</h4>
-						<ul className="list">
-							<li>
-								<strong>Modular Database Layer</strong>: High-performance
-								storage optimized for blockchain data
-							</li>
-							<li>
-								<strong>EVM Implementation</strong>: Efficient execution of
-								smart contracts
-							</li>
-							<li>
-								<strong>P2P Networking Stack</strong>: For node communication
-							</li>
-							<li>
-								<strong>RPC Interface</strong>: For application interaction
-							</li>
-						</ul>
+							<h4>Key Features</h4>
+							<p className="section-description">
+								- **Modular Database**: Optimized for blockchain data with high
+								performance. - **EVM Implementation**: Enables efficient
+								execution of smart contracts. - **P2P Networking**: Facilitates
+								communication between nodes. - **RPC Interface**: Provides
+								interaction between applications and nodes.
+							</p>
+						</div>
 					</div>
 				</section>
 
@@ -777,21 +761,45 @@ export default function RollUps() {
 					<div className="container">
 						<h2 className="section-title">Advantages of ZK RollUps</h2>
 						<ul className="list">
-							<li>
-								Immediate finality once the proof is verified (minutes rather
-								than days)
+							<li className="section__list">
+								<strong>1. ✅ Immediate Finality</strong>: Once the proof is
+								verified, finality is achieved in minutes, rather than days.
 							</li>
-							<li>Stronger security guarantees through cryptographic proofs</li>
-							<li>More efficient data storage on-chain through compression</li>
-							<li>Privacy potential through zero-knowledge technology</li>
+							<li className="section__list">
+								<strong>2. 🔒 Stronger Security</strong>: ZK Rollups provide
+								stronger security guarantees through cryptographic proofs.
+							</li>
+							<li className="section__list">
+								<strong>3. 💾 Efficient Data Storage</strong>: ZK Rollups use
+								compression to store data more efficiently on-chain.
+							</li>
+							<li className="section__list">
+								<strong>4. 🔏 Privacy Potential</strong>: Zero-knowledge
+								technology enables enhanced privacy features.
+							</li>
 						</ul>
 
 						<h2 className="section-title">Disadvantages of ZK RollUps</h2>
 						<ul className="list">
-							<li>Higher computational requirements for proof generation</li>
-							<li>More complex development environment</li>
-							<li>Limited EVM compatibility (improving with zkEVM projects)</li>
-							<li>Higher initial setup costs</li>
+							<li className="section__list">
+								<strong>1. 🖥️ Higher Computational Requirements</strong>: Proof
+								generation for ZK Rollups requires higher computational power.
+							</li>
+							<li className="section__list">
+								<strong>2. 🛠️ Complex Development</strong>: The development
+								environment for ZK Rollups is more complex compared to
+								traditional systems.
+							</li>
+							<li className="section__list">
+								<strong>3. ⚙️ Limited EVM Compatibility</strong>: While zkEVM
+								projects are improving compatibility, ZK Rollups still have some
+								limitations in EVM support.
+							</li>
+							<li className="section__list">
+								<strong>4. 💸 Higher Initial Setup Costs</strong>: Setting up ZK
+								Rollups may involve higher initial costs due to infrastructure
+								and development requirements.
+							</li>
 						</ul>
 					</div>
 				</section>
@@ -799,12 +807,6 @@ export default function RollUps() {
 				<section className="section">
 					<div className="container">
 						<h2 className="section-title">Optimistic Rollups</h2>
-						<img
-							src={optimisticrollups}
-							width="50%"
-							alt="Optimistic Rollups"
-							className="image"
-						/>
 						<p className="section-description">
 							Optimistic Rollups take a different approach to transaction
 							validation. As their name suggests, they "optimistically" assume
@@ -812,34 +814,118 @@ export default function RollUps() {
 							requiring cryptographic proofs.
 						</p>
 
-						<h3 className="section-subtitle">How Optimistic Rollups Work:</h3>
+						<h3>A Visual illustration of Optimistic RollUps</h3>
+						<img
+							src={optimisticrollups}
+							width="50%"
+							alt="Optimistic Rollups Illustration"
+							className="image"
+						/>
+
+						<section className="section">
+							<div className="container">
+								<h2 className="section-title">How Optimistic Rollups Work</h2>
+								<p className="section-description">
+									Optimistic Rollups assume that transactions are valid by
+									default. Here's a simple breakdown of how they work:
+								</p>
+								<ul className="list">
+									<li className="section__list">
+										<strong>1. 🚀 Transaction Submission</strong>: Users submit
+										transactions to the network.
+									</li>
+									<li className="section__list">
+										<strong>2. 📝 Processing Transactions</strong>: A system or
+										operator organizes and processes these transactions.
+									</li>
+									<li className="section__list">
+										<strong>3. 🔄 State Update</strong>: The system updates the
+										network based on these transactions.
+									</li>
+									<li className="section__list">
+										<strong>4. 📊 Data Publication</strong>: The transaction
+										details are published to the main Ethereum network.
+									</li>
+									<li className="section__list">
+										<strong>5. ⏳ Challenge Period</strong>: There’s a set time
+										window where anyone can challenge the transactions.
+									</li>
+									<li className="section__list">
+										<strong>6. ⚖️ Dispute Resolution</strong>: If a challenge
+										occurs, fraud can be proven and invalid transactions can be
+										reversed.
+									</li>
+									<li className="section__list">
+										<strong>7. ✔️ State Finalization</strong>: If no challenges
+										happen, the transactions are considered final.
+									</li>
+								</ul>
+							</div>
+						</section>
+
+						<section className="section__modifier">
+							<div className="container">
+								<h2 className="section-title__modifier">
+									Notable Optimistic Rollups
+								</h2>
+								<p className="section-description__modifier">
+									Some of the most notable ZK-Rollup projects in the blockchain
+									space include Optimism, Arbitrum, Cartesi.
+								</p>
+							</div>
+						</section>
+					</div>
+				</section>
+				<section className="section">
+					<div className="container">
+						<h2 className="section-title">Advantages of Optimistic RollUps</h2>
 						<ul className="list">
-							<li>
-								1. Transaction Submission: Users submit transactions, which are
-								immediately processed off-chain
+							<li className="section__list">
+								<strong>1. ✅ Better EVM Compatibility</strong>: Optimistic
+								Rollups offer better compatibility with existing Ethereum smart
+								contracts.
 							</li>
-							<li>
-								2. Data Commitment: The state of the transactions is committed
-								to Layer 1
+							<li className="section__list">
+								<strong>2. 🔒 Lower Computational</strong>: Optimistic Rollups
+								require less computational power for processing compared to ZK
+								Rollups.
 							</li>
-							<li>
-								3. Challenge Period: There is a window for anyone to challenge
-								the validity of the transactions
+							<li className="section__list">
+								<strong>3. 💻 Easier Development Migration</strong>: Developers
+								can more easily migrate their applications from Ethereum to
+								Optimistic Rollups.
 							</li>
-							<li>
-								4. Proof Generation: If a challenge occurs, the system can
-								generate a proof to invalidate the transaction
-							</li>
-							<li>
-								5. State Update: If no challenges occur, the state is finalized
+							<li className="section__list">
+								<strong>4. 🛠️ Simpler Implementation</strong>: Optimistic
+								Rollups are simpler to implement and work well with Ethereum’s
+								existing infrastructure.
 							</li>
 						</ul>
 
-						<h3 className="section-subtitle">Notable Optimistic Rollups</h3>
+						<h2 className="section-title">
+							Disadvantages of Optimistic RollUps
+						</h2>
 						<ul className="list">
-							<li>Optimism</li>
-							<li>Arbitrum</li>
-							<li>Cartesi</li>
+							<li className="section__list">
+								<strong>1. ⏳ Long Withdrawal/Finality Periods</strong>:
+								Optimistic Rollups typically have a long withdrawal and finality
+								period (around 7 days).
+							</li>
+							<li className="section__list">
+								<strong>2. ⚠️ Vulnerability to Economic Attacks</strong>: They
+								are vulnerable to specific types of economic attacks, like the
+								"long-range attack".
+							</li>
+							<li className="section__list">
+								<strong>3. 👀 Requires Active Fraud Watchers</strong>: Security
+								relies on external watchers who must monitor and challenge
+								fraudulent transactions.
+							</li>
+							<li className="section__list">
+								<strong>4. 📉 Less Efficient Data Posting</strong>: Optimistic
+								Rollups can be less efficient in terms of data posting compared
+								to ZK Rollups.
+							</li>
 						</ul>
 					</div>
 				</section>

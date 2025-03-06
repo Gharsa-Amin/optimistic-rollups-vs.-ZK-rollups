@@ -35,9 +35,10 @@ ul {
 	padding-left: 0;
 	font-size: 1.1rem;
 	margin-top: 1rem;
-	li {
-		margin-bottom: 0.75rem;
-	}
+}
+
+ul li {
+	margin-bottom: 0.75rem;
 }
 
 ul li::before {
@@ -59,10 +60,50 @@ p {
 	line-height: 1.6;
 	margin-bottom: 1rem;
 }
+
 .section-subtitle {
 	padding-top: 1.25rem;
 	color: #ef7716;
 }
+
 .section-description {
 	color: black;
+}
+
+.section__modifier {
+	background-color: black;
+	color: white;
+	padding: 3.125rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.case-study {
+	margin-bottom: 2rem;
+}
+
+.case-study h3,
+.case-study h4 {
+	color: $primary-color;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.case-study p {
+	margin-top: 1rem;
+	line-height: 1.6;
+}
+
+.case-study .section-subtitle {
+	font-size: 1.3rem;
+	padding-top: 1rem;
+	color: $primary-color;
+}
+
+.case-study ul {
+	margin-top: 0.8rem;
+}
+
+.case-study ul li {
+	margin-bottom: 0.6rem;
 }
