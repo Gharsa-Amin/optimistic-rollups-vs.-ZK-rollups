@@ -22,14 +22,6 @@ body {
 	font-weight: 600;
 }
 
-.section {
-	margin: 2rem;
-	padding: 1.5rem;
-	background-color: #fff;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 ul {
 	list-style: none;
 	padding-left: 0;
@@ -67,7 +59,7 @@ p {
 }
 
 .section-description {
-	color: black;
+	color: white;
 }
 
 .section__modifier {
@@ -107,3 +99,24 @@ p {
 .case-study ul li {
 	margin-bottom: 0.6rem;
 }
+.content-box {
+	background-color: #1f1f1f; /* Same blackish background as Infrastructure box */
+	color: white;
+	width: 90%;
+	max-width: 1200px;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-top: 2rem;
+}
+
+.section__list {
+	color: white;
+}
+// .section {
+// 	margin: 2rem;
+// 	padding: 1.5rem;
+// 	background-color: #fff;
+// 	border-radius: 8px;
+// 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+// }
