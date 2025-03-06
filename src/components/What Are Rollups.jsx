@@ -229,9 +229,7 @@ export default function RollUps() {
 
 				<section className="content-box">
 					<div className="container">
-						<h2 className="section-title__modifier">
-							Notable ZK-Rollup Projects
-						</h2>
+						<h2 className="section-subtitle">Notable ZK-Rollup Projects</h2>
 						<p className="section-description__modifier">
 							Some of the most notable ZK-Rollup projects in the blockchain
 							space include zkSync (zkSync Lite and zkSync Era), Immutable X,
@@ -244,7 +242,9 @@ export default function RollUps() {
 						<h2 className="section-title">Case Studies</h2>
 
 						<div className="case-study">
-							<h3 className="section-subtitle">Case Study 1: Polygon Hermez</h3>
+							<h3 className="section-title__modifier">
+								Case Study 1: Polygon Hermez
+							</h3>
 							<p className="section-description">
 								Polygon Hermez is a decentralized ZK-Rollup solution built on
 								Ethereum, aimed at enhancing scalability and transaction
@@ -269,7 +269,9 @@ export default function RollUps() {
 						</div>
 
 						<div className="case-study">
-							<h3 className="section-subtitle">Case Study 2: Erigon CDK</h3>
+							<h3 className="section-title__modifier">
+								Case Study 2: Erigon CDK
+							</h3>
 							<p className="section-description">
 								Erigon CDK is a modular framework designed for building
 								blockchain clients and scaling Layer 2 solutions. It offers a
@@ -412,7 +414,7 @@ export default function RollUps() {
 				</section>
 				<section className="content-box">
 					<div className="container">
-						<h2 className="section-title__modifier">
+						<h2 className="section-subtitle">
 							Notable Optimistic Rollup Projects
 						</h2>
 						<p className="section-description__modifier">
