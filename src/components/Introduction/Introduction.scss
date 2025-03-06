@@ -1,15 +1,17 @@
-.hero-section {
+.hero-section1 {
 	background: linear-gradient(
 		90deg,
 		#000000 0%,
 		#ef7716 100%
 	); /* Black to Orange gradient */
 	width: 90%;
-	height: 100vh; /* Full height */
+	height: 90vh; /* Full height */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
 }
 
 .hero-image img {
@@ -21,4 +23,21 @@
 	aspect-ratio: 2560 / 2308;
 	opacity: 1;
 	transition: opacity 0.5s ease;
+}
+.hero-content__firstPara {
+	color: white;
+}
+.introduction-section {
+	background-color: #000000;
+}
+
+.intro-header {
+	color: #ef7716;
+	font-size: 3rem;
+	padding-top: 1.875rem;
+}
+
+.intro-para {
+	color: #ffffff;
+	padding: 1.875rem;
 }

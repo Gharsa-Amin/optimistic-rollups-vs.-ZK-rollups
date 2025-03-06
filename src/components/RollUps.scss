@@ -41,7 +41,6 @@ ul {
 }
 
 ul li::before {
-	content: "✔️";
 	padding-right: 8px;
 }
 
@@ -59,4 +58,11 @@ p {
 	font-size: 1.15rem;
 	line-height: 1.6;
 	margin-bottom: 1rem;
+}
+.section-subtitle {
+	padding-top: 1.25rem;
+	color: #ef7716;
+}
+.section-description {
+	color: black;
 }

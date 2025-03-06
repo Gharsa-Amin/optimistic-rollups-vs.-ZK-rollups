@@ -1,108 +1,132 @@
 import { Link } from "react-router-dom";
+import "./InfrastructureBasics.scss";
 
 export default function InfrastructureBasics() {
 	return (
 		<>
-			<header className="bg:white text-white text-center p-6">
-				<h2 className="text-3xl font-semibold">
-					Blockchain Infrastructure Basics
-				</h2>
-			</header>
-			<h3>
-				Before diving into rollups, it's important to understand the
-				foundational elements they build upon:
-			</h3>
-			<div>
-				<h3>Blockchain Clients</h3>
-				<p>
-					Blockchain clients are software applications that connect to and
-					interact with blockchain networks. They perform several critical
-					functions:
-				</p>
-				<ul>
-					<li>
-						Network Connection:
-						<p>
-							Establishing and maintaining connections to the peer-to-peer
-							network
-						</p>
-					</li>
-					<li>
-						Network Connection:
-						<p>
-							Establishing and maintaining connections to the peer-to-peer
-							network
-						</p>
-					</li>
-					<li>
-						State Management:
-						<p>
-							Tracking the current state of the blockchain Transaction
-							Processing
-						</p>
-					</li>
-					<li>
-						Consensus Participation:
-						<p>Following the network's rules to agree on the state</p>
-					</li>
-				</ul>
-				<p>
-					Different client implementations (like Geth, Erigon, or Nethermind for
-					Ethereum) follow the same protocol but may have different
-					architectures and optimizations.
-				</p>
-				<h3>Node Management</h3>
-				<p>Running a blockchain node involves:</p>
-				<ul>
-					<li>
-						Hardware Provisioning
-						<p>Ensuring sufficient CPU, memory, storage, and bandwidth</p>
-					</li>
-					<li>
-						Software Maintenance
-						<p>Keeping client software updated and secure</p>
-					</li>
-					<li>
-						Synchronization
-						<p>Downloading and verifying the blockchain history</p>
-					</li>
-					<li>
-						Monitoring
-						<p>Tracking node performance and network status</p>
-					</li>
-				</ul>
-				<p>
-					Nodes can be categorized as full nodes (storing the entire blockchain)
-					or light nodes (storing only headers and requesting data as needed).
-				</p>
-				<h3>Validator Setups</h3>
-				<p>
-					Validators are special nodes that participate in block production and
-					consensus:
-				</p>
-				<ul>
-					<li>
-						Staking
-						<p>Depositing tokens as an economic guarantee of good behavior</p>
-					</li>
-					<li>
-						Block Production
-						<p>Creating new blocks with valid transactions</p>
-					</li>
-					<li>
-						Attestation
-						<p>Verifying and voting on blocks created by others</p>
-					</li>
-					<li>
-						Slashing Risk
-						<p>Facing penalties for malicious behavior or downtime</p>
-					</li>
-				</ul>
-				<p>
-					Validator setups require additional security considerations and often
-					more powerful hardware than regular nodes.
-				</p>
-			</div>
+			<section className="hero-section">
+				<div className="hero-content">
+					<h2 className="hero-title">Blockchain Infrastructure Basics</h2>
+					<p className="hero-description">
+						Before diving into rollups, it's important to understand the
+						foundational elements they build upon. These foundational elements
+						are Blockchain Clients, Node Management, and Validator Setups. Let's
+						discuss each one briefly.
+					</p>
+				</div>
+
+				<div className="content-box">
+					<h3 className="section-title">Blockchain Clients</h3>
+					<p>
+						Blockchain clients are software applications that connect to and
+						interact with blockchain networks. They perform several critical
+						functions:
+					</p>
+					<ul className="list">
+						<li>
+							<strong>Network Connection:</strong>
+							<p>
+								Establishing and maintaining connections to the peer-to-peer
+								network
+							</p>
+						</li>
+						<li>
+							<strong>State Management:</strong>
+							<p>Tracking the current state of the blockchain</p>
+						</li>
+						<li>
+							<strong>Transaction Processing:</strong>
+							<p>
+								Processing transactions and propagating them across the network
+							</p>
+						</li>
+						<li>
+							<strong>Consensus Participation:</strong>
+							<p>Following the network's rules to agree on the state</p>
+						</li>
+					</ul>
+					<p>
+						Different client implementations like Geth, Erigon, or Nethermind
+						for Ethereum follow the same protocol but may have different
+						architectures and optimizations.
+					</p>
+					<h3 className="section-title">Node Management</h3>{" "}
+					<p>
+						A node in a blockchain is a computer that participates in the
+						network by validating transactions, storing the blockchain's data,
+						and helping maintain the decentralized network. Running a blockchain
+						node involves:
+					</p>{" "}
+					<ul className="list">
+						{" "}
+						<li>
+							{" "}
+							<strong>Hardware Provisioning:</strong>{" "}
+							<p>
+								Ensuring the node has enough CPU, memory, storage, and bandwidth
+								to operate efficiently.
+							</p>{" "}
+						</li>{" "}
+						<li>
+							{" "}
+							<strong>Software Maintenance:</strong>{" "}
+							<p>
+								Regularly updating and securing the blockchain client software
+								to prevent vulnerabilities.
+							</p>{" "}
+						</li>{" "}
+						<li>
+							{" "}
+							<strong>Synchronization:</strong>{" "}
+							<p>
+								Downloading and verifying the blockchain's history to stay up to
+								date with the network.
+							</p>{" "}
+						</li>{" "}
+						<li>
+							{" "}
+							<strong>Monitoring:</strong>{" "}
+							<p>
+								Constantly tracking the node's performance and the overall
+								network status to ensure smooth operation.
+							</p>{" "}
+						</li>{" "}
+					</ul>{" "}
+					<p>
+						{" "}
+						Blockchain nodes can be categorized as full nodes (storing the
+						complete blockchain data) or light nodes (only storing essential
+						data and relying on full nodes for additional information).{" "}
+					</p>
+					<h3 className="section-title">Validator Setups</h3>
+					<p>
+						Validators are special nodes that participate in block production
+						and consensus:
+					</p>
+					<ul className="list">
+						<li>
+							<strong>Staking:</strong>
+							<p>Depositing tokens as an economic guarantee of good behavior</p>
+						</li>
+						<li>
+							<strong>Block Production:</strong>
+							<p>Creating new blocks with valid transactions</p>
+						</li>
+						<li>
+							<strong>Attestation:</strong>
+							<p>Verifying and voting on blocks created by others</p>
+						</li>
+						<li>
+							<strong>Slashing Risk:</strong>
+							<p>Facing penalties for malicious behavior or downtime</p>
+						</li>
+					</ul>
+					<p>
+						Validator setups require additional security considerations and
+						often more powerful hardware than regular nodes.
+					</p>
+				</div>
+			</section>
 		</>
 	);
 }

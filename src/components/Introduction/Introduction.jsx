@@ -4,11 +4,13 @@ import "./Introduction.scss";
 export default function Introduction() {
 	return (
 		<>
-			<section class="hero-section">
-				<div class="hero-content">
-					<p>Your solution for blockchain scalability and performance.</p>
+			<section className="hero-section1">
+				<div className="hero-content">
+					<p className="hero-content__firstPara">
+						Your solution for blockchain scalability and performance.
+					</p>
 				</div>
-				<div class="hero-image">
+				<div className="hero-image">
 					<img
 						decoding="async"
 						class="img-with-animation skip-lazy nectar-lazy animated-in loaded"
@@ -23,25 +25,22 @@ export default function Introduction() {
 					/>
 				</div>
 			</section>
-
-			<header className="bg:white text-white text-center p-6">
-				<h2 className="text-3xl font-semibold">Introduction</h2>
-			</header>
-			<p>
-				Blockchain technology has revolutionized how we approach trust and
-				decentralization. However, as networks like Ethereum gained popularity,
-				a significant challenge emerged: scalability.
-			</p>
-			<p>
-				As more users join blockchain networks, transaction throughput
-				limitations lead to congestion and high fees. These challenges prompted
-				a critical question: How can networks increase transaction throughput
-				without sacrificing decentralization and security?
-			</p>
-			<p>
-				Layer 2 (L2) scaling solutions have emerged to address these issues,
-				with rollups becoming the leading approach to blockchain scaling.
-			</p>
+			<section className="introduction-section">
+				<header className="introduction">
+					<h2 className="intro-header">Introduction</h2>
+				</header>
+				<p className="intro-para">
+					Blockchain technology has revolutionized how we approach trust and
+					decentralization. However, as networks like Ethereum gained
+					popularity, a significant challenge emerged: scalability. As more
+					users join blockchain networks, transaction throughput limitations
+					lead to congestion and high fees. These challenges prompted a critical
+					question: How can networks increase transaction throughput without
+					sacrificing decentralization and security? Layer 2 (L2) scaling
+					solutions have emerged to address these issues, with rollups becoming
+					the leading approach to blockchain scaling.
+				</p>
+			</section>
 		</>
 	);
 }
