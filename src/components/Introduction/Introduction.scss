@@ -4,7 +4,7 @@
 		#000000 0%,
 		#ef7716 100%
 	); /* Black to Orange gradient */
-	width: 90%;
+	width: 99%;
 	height: 90vh; /* Full height */
 	display: flex;
 	justify-content: center;
@@ -26,6 +26,7 @@
 }
 .hero-content__firstPara {
 	color: white;
+	font-size: 1.875rem;
 }
 .introduction-section {
 	background-color: #000000;
@@ -40,4 +41,10 @@
 .intro-para {
 	color: #ffffff;
 	padding: 1.875rem;
+	font-size: 1.25rem;
+}
+.hero-content__title {
+	padding: 1.875rem;
+	padding-bottom: 3.125rem;
+	color: #ef7716;
 }

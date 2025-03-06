@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import zkrollups from "../assets/zk rollups .webp";
-import optimisticrollups from "../assets/Optimistic rollups .webp";
+import zkrollups from "../../assets/zk rollups .webp";
+import optimisticrollups from "../../assets/Optimistic rollups .webp";
 import "./RollUps.scss";
-import ComparisonTable from "./Charts/chart";
+import ComparisonTable from "../Charts/chart";
 
 export default function RollUps() {
 	return (

@@ -4,6 +4,9 @@ import "./Introduction.scss";
 export default function Introduction() {
 	return (
 		<>
+			<h1 className="hero-content__title">
+				Your Comprehensive Guide to Blockchain Rollups: Scaling the Future
+			</h1>
 			<section className="hero-section1">
 				<div className="hero-content">
 					<p className="hero-content__firstPara">
