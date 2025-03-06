@@ -1,10 +1,31 @@
-Assignment Details:
+# Optimistic Rollups vs. ZK Rollups - A Web3 Scaling Comparison
 
-You will be asked to create a short user-focused documentation piece on a Web3 topic, specifically comparing optimistic rollups vs. ZK rollups. The task is to write an accessible guide or article that covers the following:
-• Explanation of Concepts: Clearly define what optimistic rollups and ZK (zero-knowledge) rollups are, in your own words. Assume the reader has basic blockchain knowledge but is not an expert.
-• Key Differences: Describe the differences between the two approaches (how they work, security models, performance, etc.) in a concise and understandable manner. Highlight the pros and cons or appropriate use-cases of each, in a way that would help a user or developer decide which to use.
-• Accessible Language: Use a tone that is friendly and professional. Avoid unnecessary jargon – if you must use technical terms, briefly explain them. The goal is to make the content understandable to non-experts while still providing value to technical readers.
-• Structure and Clarity: Organize the document with clear headings, subheadings, or bullet points so that it’s easy to scan. For example, you might include an introduction, a section for each type of rollup, a comparison section, and a conclusion or summary. You can also include a short step-by-step example or analogy if it helps illustrate the concepts.
+Welcome to this comprehensive guide on **Optimistic Rollups** and **ZK Rollups**! This document will help you understand the differences between these two important Layer 2 scaling solutions for Ethereum. We will explore what each rollup is, how they work, and which one might be the best choice for your use case.
 
-Expected Deliverable:
-A written document or markdown file (approximately 2-3 pages, or about 800-1200 words) that fulfills the above requirements. The content should be polished as if it were going directly into our user documentation. We will be looking at how well you explain the topic, the clarity of your writing, the accuracy of information, and how you structure the guide. This assignment is meant to showcase your ability to educate users on complex Web3 topics in a clear and concise way.
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [What are Optimistic Rollups?](#what-are-optimistic-rollups)
+3. [What are ZK Rollups?](#what-are-zk-rollups)
+4. [Key Differences Between Optimistic Rollups and ZK Rollups](#key-differences-between-optimistic-rollups-and-zk-rollups)
+5. [Which Rollup is Right for You?](#which-rollup-is-right-for-you)
+6. [Conclusion](#conclusion)
+
+## Introduction
+
+As Ethereum continues to grow, scalability has become a major concern. To address this, **Layer 2 scaling solutions** like **Rollups** have been introduced to improve transaction throughput without compromising the security of the Ethereum network. There are two main types of rollups: **Optimistic Rollups** and **ZK Rollups**. 
+
+This guide aims to provide a clear and concise comparison of these two technologies, helping you make an informed decision on which is best suited for your needs.
+
+## Key Differences Between Optimistic Rollups and ZK Rollups
+
+| **Aspect**               | **Optimistic Rollups**                                       | **ZK Rollups**                                              |
+|--------------------------|--------------------------------------------------------------|-------------------------------------------------------------|
+| **Transaction Validation**| Assumes transactions are valid and uses fraud proofs.        | Uses cryptographic proofs (ZK-SNARKs) to validate transactions. |
+| **Finality**              | Transaction finality occurs after a challenge period.        | Immediate finality due to instant transaction validation.     |
+| **Security**              | Relies on fraud proofs; less secure than ZK Rollups.         | High security ensured by cryptographic proofs.               |
+| **Performance**           | May experience delays due to fraud-proof challenges.         | Faster due to immediate validation of transactions.          |
+| **Complexity**            | Easier to implement, but may result in slower finality.      | More complex to implement due to cryptographic proofs.       |
+| **Use Case**              | Better for applications where simplicity and cost-effectiveness are more important. | Ideal for applications that prioritize security and fast finality. |
+
+---
